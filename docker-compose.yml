@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  converter:
+    build:
+      context: Dockerfile.d/converter
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    user: "${UID:-0}:${GID:-0}"
+    command:
+      - bash
+      - -c
+      - |
+        mt-to-hugo-article-converter --config-file=migrate-config.yaml

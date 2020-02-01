@@ -1,0 +1,25 @@
+version: "2019.10.0"
+output:
+  base_path: data/converted
+  content_path_fmt: "content/posts/%Y.%m"
+  static_path_fmt: "static/posts/%Y.%m"
+input:
+  path: data/exported.txt
+  start_at: 2018/01/01 00:00:00
+  stop_at: 2018/12/31 23:59:59
+asset_download:
+  enabled: true
+  base_url: "https://cdn-ak.f.st-hatena.com"
+  filter:
+    - regex: "^/"
+    - regex: 'https?://cdn-ak\.f\.st-hatena\.com'
+attribute_map:
+  tags:
+    from:
+      - TAGS
+      - CATEGORY
+    values:
+      amazon-sagemaker:
+        - sagemaker
+      terraform:
+        - terraform
