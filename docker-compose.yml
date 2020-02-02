@@ -12,3 +12,11 @@ services:
       - -c
       - |
         mt-to-hugo-article-converter --config-file=migrate-config.yaml
+  website:
+    image: mazgi/hugo-static-website:hugo-0.57-2019.08.3
+    working_dir: /mazgi.github.io.content
+    command: hugo server --bind 0.0.0.0 --buildDrafts --buildFuture
+    volumes:
+      - ./proofreading:/mazgi.github.io.content
+    ports:
+      - "31313:1313"
