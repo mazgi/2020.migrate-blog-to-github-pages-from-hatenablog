@@ -14,12 +14,76 @@ asset_download:
     - regex: "^/"
     - regex: 'https?://cdn-ak\.f\.st-hatena\.com'
 attribute_map:
+  categories:
+    from:
+      - TAGS
+      - CATEGORY
+    values:
+      book:
+      event:
+        - Conference
+        - Interview
   tags:
     from:
       - TAGS
       - CATEGORY
     values:
+      adobe-cc:
+        - Adobe CC
+      apple-ios:
+        - iOS
       amazon-sagemaker:
         - sagemaker
+      amazon-cloudfront:
+        - Amazon CloudFront
+      amazon-s3:
+        - Amazon S3
+      ansible:
+      aws:
+      aws-kms:
+        - "AWS KMS"
+      btrfs:
+      c-language:
+        - C
+      c++:
+      circleci:
+        - CircleCI 2.0
+      fluentd:
+      git:
+      hugo:
+      infrastructure-as-code:
+        - "Infrastructure as Code"
+      device:
+        - Gadget
+        - LeapMotion
+      gentoo:
+      github:
+      hardware:
+        - ICT Infrastructure
+        - IDC
+        - ML115
+      java:
+      javascript:
+        - JavaSript
+      jenkins:
+      jupyter-notebook:
+        - Jupyter
+      lvm:
+      linux:
+      mac:
+      mongodb:
+      mysql:
+      network:
+      objective-c:
+      operation:
+      ruby:
+      ruby-on-rails:
+      security:
+      scala:
+      screen:
+      solaris:
       terraform:
-        - terraform
+      translation:
+      unity:
+      xen:
+      zsh:
